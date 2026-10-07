@@ -168,7 +168,7 @@ export function HeroSection() {
             </div>
 
             <div className="mt-1 font-black text-[#070f32]">
-              Kring Pajak 500200
+              Kring Pajak 1500 200
             </div>
           </a>
         </motion.div>

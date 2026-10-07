@@ -1,0 +1,13 @@
+/* Official DJP identity reference for the project.
+   Source: Direktorat Jenderal Pajak — Standardisasi Identitas DJP.
+   Use the official DJP logo asset; do not redraw or separate the logogram/logotype.
+*/
+:root {
+  --djp-blue-dark: #212C5F;
+  --djp-blue: #263788;
+  --djp-navy: #070F32;
+  --djp-yellow: #FFE804;
+  --djp-yellow-2: #FFC91B;
+  --djp-gold: #C89221;
+  --djp-blue-light: #EAF0FF;
+}

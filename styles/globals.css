@@ -1,0 +1,477 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * DJP / KPP MADYA DUA JAKARTA BARAT
+ * Global visual system
+ *
+ * Official DJP brand palette:
+ * #212C5F  Dark Blue
+ * #263788  Blue
+ * #070F32  Navy
+ * #FFE804  Yellow
+ * #FFC91B  Yellow
+ * #C89221  Gold
+ *
+ * Keep official DJP logo artwork as supplied by DJP.
+ * This stylesheet only controls the surrounding UI.
+ */
+
+:root {
+  --background: #ffffff;
+  --foreground: #070f32;
+
+  --card: #ffffff;
+  --card-foreground: #070f32;
+
+  --popover: #ffffff;
+  --popover-foreground: #070f32;
+
+  --primary: #263788;
+  --primary-foreground: #ffffff;
+
+  --secondary: #eaf0ff;
+  --secondary-foreground: #212c5f;
+
+  --muted: #f3f6fc;
+  --muted-foreground: #53607f;
+
+  --accent: #ffe804;
+  --accent-foreground: #070f32;
+
+  --destructive: #b42318;
+  --destructive-foreground: #ffffff;
+
+  --border: #dce3f3;
+  --input: #dce3f3;
+  --ring: #263788;
+
+  --chart-1: #263788;
+  --chart-2: #ffe804;
+  --chart-3: #212c5f;
+  --chart-4: #c89221;
+  --chart-5: #070f32;
+
+  --radius: 0.875rem;
+
+  --sidebar: #ffffff;
+  --sidebar-foreground: #070f32;
+  --sidebar-primary: #263788;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #eaf0ff;
+  --sidebar-accent-foreground: #212c5f;
+  --sidebar-border: #dce3f3;
+  --sidebar-ring: #263788;
+
+  /* DJP semantic tokens */
+  --djp-blue-dark: #212c5f;
+  --djp-blue: #263788;
+  --djp-navy: #070f32;
+  --djp-yellow: #ffe804;
+  --djp-yellow-2: #ffc91b;
+  --djp-gold: #c89221;
+  --djp-blue-light: #eaf0ff;
+  --djp-surface: #f7f9ff;
+
+  /* Compatibility aliases for older template components */
+  --lime: #ffe804;
+  --charcoal: #070f32;
+  --pineapple: #ffc91b;
+  --coconut: #f7f9ff;
+}
+
+.dark {
+  --background: #070f32;
+  --foreground: #ffffff;
+
+  --card: #0d1745;
+  --card-foreground: #ffffff;
+
+  --popover: #0d1745;
+  --popover-foreground: #ffffff;
+
+  --primary: #ffe804;
+  --primary-foreground: #070f32;
+
+  --secondary: #17235a;
+  --secondary-foreground: #ffffff;
+
+  --muted: #17235a;
+  --muted-foreground: #c4cbe0;
+
+  --accent: #ffe804;
+  --accent-foreground: #070f32;
+
+  --destructive: #f04438;
+  --destructive-foreground: #ffffff;
+
+  --border: #263568;
+  --input: #263568;
+  --ring: #ffe804;
+
+  --chart-1: #ffe804;
+  --chart-2: #263788;
+  --chart-3: #c89221;
+  --chart-4: #eaf0ff;
+  --chart-5: #ffffff;
+
+  --sidebar: #070f32;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #ffe804;
+  --sidebar-primary-foreground: #070f32;
+  --sidebar-accent: #17235a;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #263568;
+  --sidebar-ring: #ffe804;
+}
+
+@theme inline {
+  --font-sans: "Inter", "Geist", "Geist Fallback", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "Geist Mono", monospace;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --color-lime: var(--lime);
+  --color-charcoal: var(--charcoal);
+  --color-pineapple: var(--pineapple);
+  --color-coconut: var(--coconut);
+
+  --color-djp-blue-dark: var(--djp-blue-dark);
+  --color-djp-blue: var(--djp-blue);
+  --color-djp-navy: var(--djp-navy);
+  --color-djp-yellow: var(--djp-yellow);
+  --color-djp-yellow-2: var(--djp-yellow-2);
+  --color-djp-gold: var(--djp-gold);
+  --color-djp-blue-light: var(--djp-blue-light);
+}
+
+/* ---------- Base ---------- */
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: var(--djp-yellow);
+    color: var(--djp-navy);
+  }
+
+  button,
+  a {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  :focus-visible {
+    outline: 3px solid rgba(255, 232, 4, 0.7);
+    outline-offset: 3px;
+  }
+}
+
+/* ---------- DJP surfaces ---------- */
+
+.djp-surface {
+  background:
+    radial-gradient(circle at 80% 10%, rgba(255, 232, 4, 0.13), transparent 25%),
+    linear-gradient(135deg, #263788 0%, #212c5f 52%, #070f32 100%);
+  color: #ffffff;
+}
+
+.djp-navy-surface {
+  background: #070f32;
+  color: #ffffff;
+}
+
+.djp-blue-surface {
+  background: #263788;
+  color: #ffffff;
+}
+
+.djp-yellow-surface {
+  background: #ffe804;
+  color: #070f32;
+}
+
+.djp-soft-surface {
+  background:
+    radial-gradient(circle at 10% 10%, rgba(38, 55, 136, 0.07), transparent 30%),
+    #f7f9ff;
+  color: #070f32;
+}
+
+.djp-glass {
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(38, 55, 136, 0.12);
+  box-shadow: 0 18px 50px rgba(7, 15, 50, 0.08);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.djp-outline {
+  border: 1px solid rgba(38, 55, 136, 0.18);
+}
+
+.djp-focus {
+  box-shadow:
+    0 0 0 3px rgba(255, 232, 4, 0.25),
+    0 10px 30px rgba(38, 55, 136, 0.12);
+}
+
+/* ---------- Motion ---------- */
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-14px) rotate(2deg);
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(255, 232, 4, 0.15);
+  }
+  50% {
+    box-shadow: 0 0 42px rgba(255, 232, 4, 0.38);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes grain {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -10%);
+  }
+  30% {
+    transform: translate(3%, -15%);
+  }
+  50% {
+    transform: translate(12%, 9%);
+  }
+  70% {
+    transform: translate(9%, 4%);
+  }
+  90% {
+    transform: translate(-1%, 7%);
+  }
+}
+
+@keyframes djp-shimmer {
+  0% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: translateX(120%);
+  }
+}
+
+@keyframes djp-breathe {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.025);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2.4s ease-in-out infinite;
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+
+.animate-djp-breathe {
+  animation: djp-breathe 4s ease-in-out infinite;
+}
+
+.djp-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.djp-shimmer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 35%;
+  transform: translateX(-120%);
+  background: linear-gradient(
+    100deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  animation: djp-shimmer 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* ---------- Existing template noise ---------- */
+
+.noise-overlay {
+  position: relative;
+  isolation: isolate;
+}
+
+.noise-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.025;
+  pointer-events: none;
+  animation: grain 8s steps(10) infinite;
+}
+
+/* ---------- Gen Z service UI ---------- */
+
+.djp-service-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(38, 55, 136, 0.12);
+  border-radius: 1.25rem;
+  background: #ffffff;
+  box-shadow: 0 12px 36px rgba(7, 15, 50, 0.07);
+  transition:
+    transform 240ms ease,
+    box-shadow 240ms ease,
+    border-color 240ms ease;
+}
+
+.djp-service-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(38, 55, 136, 0.28);
+  box-shadow: 0 22px 48px rgba(7, 15, 50, 0.12);
+}
+
+.djp-service-icon {
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.9rem;
+  background: #eaf0ff;
+  color: #263788;
+}
+
+.djp-yellow-accent {
+  color: #070f32;
+  background: #ffe804;
+}
+
+.djp-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  border-radius: 999px;
+  padding: 0.45rem 0.75rem;
+  background: #eaf0ff;
+  color: #212c5f;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.djp-pill-yellow {
+  background: #ffe804;
+  color: #070f32;
+}
+
+/* ---------- Responsive polish ---------- */
+
+@media (max-width: 767px) {
+  .djp-glass {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .djp-service-card:hover {
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

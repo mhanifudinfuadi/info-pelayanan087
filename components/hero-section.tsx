@@ -184,7 +184,7 @@ export function HeroSection() {
           style={{ x: textX2 }}
           className="hidden md:block absolute right-14 bottom-12 text-[#ffe804]/50 font-black text-[7rem] leading-none select-none"
         >
-          <div id="PajaKita"></div>
+          <div id="#PajaKita"></div>
         </motion.div>
 
         <motion.div

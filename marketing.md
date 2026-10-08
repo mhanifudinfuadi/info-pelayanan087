@@ -27,6 +27,24 @@ Website ini adalah experience layer informasi layanan — bukan pengganti situs 
 
 Logo DJP harus menggunakan aset resmi DJP dan tidak boleh digambar ulang, dipisahkan, atau diubah proporsinya.
 
+import Image from "next/image";
+
+<div className="flex items-center gap-3">
+  <Image
+    src="/images/logoweb.png"
+    alt="Direktorat Jenderal Pajak"
+    width={72}
+    height={40}
+    className="h-9 w-auto object-contain sm:h-10"
+    priority
+  />
+
+  <div className="border-l border-[#263788]/20 pl-3 leading-tight">
+    <p className="text-sm font-bold text-[#212C5F]">Info Layanan</p>
+    <p className="text-xs text-[#212C5F]/75">KPP Madya Dua Jakarta Barat</p>
+  </div>
+</div>
+
 ## Key Features
 
 - Smooth scrolling dengan Lenis

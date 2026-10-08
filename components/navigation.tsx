@@ -48,7 +48,7 @@ export function Navigation() {
           <span className="hidden sm:block h-7 w-px bg-[#dce3f3]" />
           <span className="hidden sm:block text-[#212c5f] font-semibold text-sm leading-tight">
             Info Layanan
-            <span className="block text-[#53607f] font-normal">KPP / DJP</span>
+            <span className="block text-[#53607f] font-normal">KPP Madya Dua Jakarta Barat</span>
           </span>
         </Link>
 

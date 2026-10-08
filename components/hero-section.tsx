@@ -85,11 +85,11 @@ export function HeroSection() {
             transition={{ duration: 0.7, delay: 0.28 }}
             className="mt-7 max-w-2xl text-lg md:text-2xl text-[#53607f] leading-relaxed"
           >
-            Info layanan KPP yang kamu butuhin—
+            Info layanan KPP yang kamu butuhin, mulai dari
             <strong className="text-[#212c5f]">
-              NPWP, SPT, bayar pajak, sampai konsultasi
+            NPWP, SPT, bayar pajak, sampai konsultasi
             </strong>
-            —dibikin lebih gampang buat dicari.
+            jadi lebih gampang buat dicari.
           </motion.p>
 
           <motion.div

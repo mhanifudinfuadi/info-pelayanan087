@@ -67,7 +67,7 @@ export function BentoGrid() {
       <div className="max-w-7xl mx-auto px-5 md:px-6">
         <div className="mb-10">
           <span className="font-mono text-[#263788] text-xs tracking-[.25em]">PICK YOUR NEED</span>
-          <h2 className="text-4xl md:text-6xl font-black tracking-tight text-[#070f32] mt-2">Yang kamu cari, ada.</h2>
+          <h2 className="text-4xl md:text-6xl font-black tracking-tight text-[#070f32] mt-2">Yang kamu cari, ada di sini.</h2>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4" style={{ perspective: 1000 }}>
           {features.map((feature, index) => <FeatureCard key={feature.title} feature={feature} index={index} />)}

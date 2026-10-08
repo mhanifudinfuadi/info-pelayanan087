@@ -87,9 +87,9 @@ export function HeroSection() {
           >
             Info layanan KPP yang kamu butuhin, mulai dari
             <strong className="text-[#212c5f]">
-            NPWP, SPT, bayar pajak, sampai konsultasi
+             NPWP, SPT, bayar pajak, sampai konsultasi
             </strong>
-            jadi lebih gampang buat dicari.
+             jadi lebih gampang buat dicari.
           </motion.p>
 
           <motion.div
@@ -184,7 +184,7 @@ export function HeroSection() {
           style={{ x: textX2 }}
           className="hidden md:block absolute right-14 bottom-12 text-[#ffe804]/50 font-black text-[7rem] leading-none select-none"
         >
-          #PajaKita
+          <div id="PajaKita"></div>
         </motion.div>
 
         <motion.div

@@ -21,7 +21,7 @@ export function Footer() {
                 alt="Direktorat Jenderal Pajak"
                 width={400}
                 height={240}
-                className="h-10 w-auto object-contain"
+                className="h-16 w-auto object-contain sm:h-20"
               />
             </a>
             <h2 className="text-4xl md:text-5xl font-black tracking-tight mt-7">Pajak nggak harus bikin pusing.</h2>

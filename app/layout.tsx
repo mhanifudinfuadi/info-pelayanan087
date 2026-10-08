@@ -19,7 +19,11 @@ const _jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Info Layanan KPP | Pajak? Santai.",
   description:
-    "Temukan informasi layanan KPP dengan bahasa yang simpel, mulai dari NPWP, SPT, pembayaran pajak, sampai konsultasi.",
+<p>
+  Info layanan KPP yang kamu butuhin, mulai dari{" "}
+  <strong>NPWP,</strong>{" "}<strong>SPT,</strong> bayar pajak, sampai konsultasi{" "}
+  jadi lebih gampang buat dicari.
+</p>
   keywords: [
     "KPP",
     "layanan KPP",

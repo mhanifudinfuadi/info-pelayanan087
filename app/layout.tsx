@@ -29,17 +29,8 @@ export const metadata: Metadata = {
     "pembayaran pajak",
     "konsultasi pajak",
     "KPP Madya Dua Jakarta Barat",
-  ],
-};
-
-  keywords: [
-    "KPP",
-    "layanan KPP",
-    "layanan pajak",
-    "NPWP",
-    "SPT",
-    "pembayaran pajak",
-    "konsultasi pajak",
+    "KPP 087",
+    "Coretax DJP",
   ],
   generator: "Next.js",
 }
@@ -67,6 +58,7 @@ export default function RootLayout({
         >
           <LenisProvider>{children}</LenisProvider>
         </ClickSpark>
+
         <Analytics />
       </body>
     </html>

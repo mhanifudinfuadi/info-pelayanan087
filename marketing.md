@@ -31,7 +31,7 @@ import Image from "next/image";
 
 <div className="flex items-center gap-3">
   <Image
-    src="\public\images\logoweb.png"
+    src="/public/images/logoweb.png"
     alt="Direktorat Jenderal Pajak"
     width={72}
     height={40}

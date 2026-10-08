@@ -5,8 +5,8 @@ export function DjpLogo() {
     <Image
       src="/images/logoweb.png"
       alt="Direktorat Jenderal Pajak"
-      width={180}
-      height={60}
+      width={400}
+      height={240}
       className="h-auto w-auto object-contain"
     />
   )

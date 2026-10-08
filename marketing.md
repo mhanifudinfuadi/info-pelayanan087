@@ -33,8 +33,8 @@ import Image from "next/image";
   <Image
     src="/public/images/logoweb.png"
     alt="Direktorat Jenderal Pajak"
-    width={72}
-    height={40}
+    width={400}
+    height={240}
     className="h-9 w-auto object-contain sm:h-10"
     priority
   />

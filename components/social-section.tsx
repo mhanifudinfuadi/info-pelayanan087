@@ -14,11 +14,11 @@ export function SocialSection() {
     <section id="konsultasi" className="relative py-20 md:py-28 bg-[#eaf0ff] overflow-hidden">
       <div className="max-w-7xl mx-auto px-5 md:px-6">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-5 mb-10">
-          <div>
+          <div> 
             <span className="font-mono text-[#263788] text-xs tracking-[.25em]">KANAL RESMI Direktorat Jenderal Pajak</span>
             <h2 className="text-4xl md:text-6xl font-black text-[#070f32] tracking-tight mt-2">Stay updated.</h2>
           </div>
-          <p className="max-w-md text-[#53607f]">Untuk informasi yang bersifat resmi, </br >agar selalu lanjutkan ke kanal Direktorat Jenderal Pajak.</p>
+          <p className="max-w-md text-[#53607f]">Untuk informasi yang bersifat resmi, agar selalu lanjutkan ke kanal Direktorat Jenderal Pajak.</p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-4">

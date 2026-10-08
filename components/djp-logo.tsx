@@ -1,11 +1,13 @@
-import type { ImgHTMLAttributes } from "react"
+import Image from "next/image"
 
-export function DjpLogo(props: ImgHTMLAttributes<HTMLImageElement>) {
+export function DjpLogo() {
   return (
-    <img
-      src="/logo-djp-horizontal.svg"
+    <Image
+      src="/images/logoweb.png"
       alt="Direktorat Jenderal Pajak"
-      {...props}
+      width={180}
+      height={60}
+      className="h-auto w-auto object-contain"
     />
   )
 }

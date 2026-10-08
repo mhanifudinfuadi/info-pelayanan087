@@ -16,7 +16,13 @@ export function Footer() {
         <div className="grid lg:grid-cols-[1.4fr_1fr_1fr] gap-12 pb-12">
           <div>
             <a href="#hero" aria-label="Kembali ke beranda Info Layanan KPP" className="block w-24 h-14 relative focus:outline-none focus-visible:ring-2 focus-visible:ring-[#ffe804] rounded-md">
-              <Image src="/public/images/logoweb.png" alt="Direktorat Jenderal Pajak" fill className="object-contain object-left" />
+              <Image
+                src="/images/logoweb.png"
+                alt="Direktorat Jenderal Pajak"
+                width={180}
+                height={60}
+                className="h-10 w-auto object-contain"
+              />
             </a>
             <h2 className="text-4xl md:text-5xl font-black tracking-tight mt-7">Pajak nggak harus bikin pusing.</h2>
             <p className="text-white/55 max-w-md mt-4 leading-relaxed">Mulai dari info yang kamu butuhin, lalu lanjutkan ke kanal resmi kami.</p>

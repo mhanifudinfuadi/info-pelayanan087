@@ -36,14 +36,13 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto px-5 md:px-6 h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 shrink-0" aria-label="Info Layanan KPP">
           <div className="relative h-11 w-20 sm:h-12 sm:w-24">
-            <Image
-              src="/logo-djp-horizontal.svg"
-              alt="Direktorat Jenderal Pajak"
-              fill
-              priority
-              sizes="96px"
-              className="object-contain object-left"
-            />
+          <Image
+            src="/images/logoweb.png"
+            alt="Direktorat Jenderal Pajak"
+            width={180}
+            height={60}
+            className="h-10 w-auto object-contain"
+          />
           </div>
           <span className="hidden sm:block h-7 w-px bg-[#dce3f3]" />
           <span className="hidden sm:block text-[#212c5f] font-semibold text-sm leading-tight">

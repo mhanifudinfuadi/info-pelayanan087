@@ -29,15 +29,15 @@ Logo DJP harus menggunakan aset resmi DJP dan tidak boleh digambar ulang, dipisa
 
 import Image from "next/image";
 
-<div className="flex items-center gap-3">
+<div className="relative h-16 w-28 sm:h-[72px] sm:w-32">
   <Image
-    src="/public/images/logoweb.png"
+    src="/images/logoweb.png"
     alt="Direktorat Jenderal Pajak"
     width={400}
     height={240}
-    className="h-9 w-auto object-contain sm:h-10"
-    priority
+    className="h-16 w-auto object-contain sm:h-[72px]"
   />
+</div>
 
   <div className="border-l border-[#263788]/20 pl-3 leading-tight">
     <p className="text-sm font-bold text-[#212C5F]">Info Layanan</p>

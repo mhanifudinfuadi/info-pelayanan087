@@ -9,7 +9,7 @@ const features = [
   { icon: UserPlus, title: "NPWP", subtitle: "Daftar & Kelola", description: "Mulai dari identitas perpajakan tanpa muter-muter.", accent: "#263788", href: "https://pajak.go.id/coretaxpedia/", external: true },
   { icon: FileText, title: "SPT", subtitle: "Lapor", description: "Tahu apa yang perlu disiapkan sebelum lapor.", accent: "#c89221", href: "https://pajak.go.id/coretaxpedia/", external: true },
   { icon: WalletCards, title: "Bayar", subtitle: "Pajak", description: "Pahami alur pembayaran dan kanal resminya.", accent: "#212c5f", href: "https://pajak.go.id/coretaxpedia/", external: true },
-  { icon: Headset, title: "Bantuan", subtitle: "Konsultasi", description: "Cari jawaban di Coretaxpedia atau lanjut ke kanal bantuan WhatsApp.", accent: "#ffc91b", href: "https://pajak.go.id/coretaxpedia/", external: true },
+  { icon: Headset, title: "Bantuan", subtitle: "Konsultasi", description: "masih bingung soal pajak? Tenang, kalau mau konsultasi langsung bisa hubungi AR kalian di sini.", accent: "#ffc91b", href: "https://updatekontakar087.vercel.app/", external: true },
 ]
 
 function FeatureCard({ feature, index }: { feature: (typeof features)[0]; index: number }) {

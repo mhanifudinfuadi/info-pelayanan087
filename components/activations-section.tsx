@@ -79,7 +79,7 @@ export function ActivationsSection() {
                     <a href="https://wa.me/6282297002049" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-xl bg-[#263788] px-4 py-3 text-xs font-bold text-white hover:opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#ffe804]">
                       WhatsApp Pelayanan
                     </a>
-                    <a href="https://wa.me/6282297002056" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-xl border border-[#263788]/20 px-4 py-3 text-xs font-bold text-[#263788] hover:bg-[#f7f9ff] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#ffe804]">
+                    <a href="https://wa.me/6282297002056" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-xl border border-[#263788]/20 px-4 py-3 text-xs font-bold text-[#263788] hover:bg-[#ffe804] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#ffe804]">
                       WhatsApp Helpdesk
                     </a>
                   </div>

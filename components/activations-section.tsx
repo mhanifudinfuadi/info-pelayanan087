@@ -26,14 +26,14 @@ export function ActivationsSection() {
           <div>
             <span className="font-mono text-[#ffe804] text-xs tracking-[.25em]">NGGAK TAHU MULAI DARI MANA?</span>
             <h2 className="text-4xl md:text-6xl font-black tracking-tight leading-[.95] mt-4">Mulai dari<br /><span className="text-[#ffe804]">sini aja.</span></h2>
-            <p className="mt-6 text-white/65 max-w-md leading-relaxed">Nggak perlu langsung hafal istilah pajak. </br >Ikuti alurnya satu per satu.</p>
+            <p className="mt-6 text-white/65 max-w-md leading-relaxed">Nggak perlu langsung hafal istilah pajak. <br />Ikuti alurnya satu per satu.</p>
           </div>
 
           <div className="space-y-3">
             {steps.map((step, i) => (
               <motion.a
                 key={step.n}
-                href={step.href}
+                href={step.href}  
                 target={step.external ? "_blank" : undefined}
                 rel={step.external ? "noopener noreferrer" : undefined}
                 initial={{ opacity: 0, x: 30 }}

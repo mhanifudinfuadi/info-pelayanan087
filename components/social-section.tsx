@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 import { ArrowUpRight, BookOpen, Bell, Instagram } from "lucide-react"
 
 const info = [
-  { icon: BookOpen, label: "Edukasi", title: "Belajar pajak tanpa bahasa ribet", text: "Cari informasi dan edukasi perpajakan dari sumber resmi.", href: "https://edukasi.pajak.go.id/" },
+  { icon: BookOpen, label: "Edukasi", title: "Belajar pajak tanpa ribet", text: "Cari informasi dan edukasi perpajakan dari sumber resmi.", href: "https://edukasi.pajak.go.id/" },
   { icon: Bell, label: "Info terbaru", title: "Jangan ketinggalan update", text: "Pantau pengumuman, layanan, dan informasi terbaru Direktorat Jenderal Pajak.", href: "https://www.instagram.com/pajakmadyaduajakbar/" },
   { icon: Instagram, label: "Media sosial KPP", title: "Ikuti kanal KPP 087", text: "Temukan informasi layanan dan edukasi KPP Madya Dua Jakarta Barat.", href: "https://www.instagram.com/pajakmadyaduajakbar/" },
 ]

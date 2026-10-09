@@ -39,7 +39,7 @@ const services = [
     id: 4,
     name: "Konsultasi",
     tagline: "BUTUH BANTUAN?",
-    description: "Kalau masih bingung, temukan jalur konsultasi dan layanan resmi DJP/KPP.",
+    description: "Kalau masih bingung, temukan jalur konsultasi dan layanan resmi Direktorat Jenderal Pajak/KPP.",
     icon: MessageCircle,
     accent: "#263788",
     bg: "from-[#263788]/15 via-[#ffe804]/10 to-transparent",

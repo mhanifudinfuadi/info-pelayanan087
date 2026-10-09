@@ -5,7 +5,7 @@ import Image from "next/image"
 import { ExternalLink, Phone, MapPin, Mail } from "lucide-react"
 
 const links = [
-  { title: "Layanan", items: [["NPWP", "https://pajak.go.id/coretaxpedia/"], ["SPT", "https://pajak.go.id/coretaxpedia/"], ["Pembayaran", "https://pajak.go.id/coretaxpedia/"], ["Konsultasi", "https://pajak.go.id/coretaxpedia/"]] },
+  { title: "Layanan", items: [["NPWP", "https://pajak.go.id/coretaxpedia/"], ["SPT", "https://pajak.go.id/coretaxpedia/"], ["Pembayaran", "https://pajak.go.id/coretaxpedia/"], ["Konsultasi", "https://updatekontakar087.vercel.app/"]] },
   { title: "Mulai", items: [["Cara mulai", "#cara-mulai"], ["Layanan online", "#online"], ["Beranda", "#hero"]] },
 ]
 

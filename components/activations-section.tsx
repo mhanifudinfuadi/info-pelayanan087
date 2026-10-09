@@ -76,10 +76,11 @@ export function ActivationsSection() {
                 <p className="text-sm text-[#53607f] mt-2 leading-relaxed">{card.text}</p>
                 {card.title === "Minta bantuan" ? (
                   <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-2">
-                    <a href="https://wa.me/6282297002049" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-xl bg-[#263788] px-4 py-3 text-xs font-bold text-white hover:opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#ffe804]">
+                    <a href="https://wa.me/6282297002049" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-xl hover:bg-[#ffe804]
+                      bg-[#263788] px-4 py-3 text-xs font-bold text-white hover:opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#ffe804]">
                       WhatsApp Pelayanan
                     </a>
-                    <a href="https://wa.me/6282297002056" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-xl border border-[#263788]/20 px-4 py-3 text-xs font-bold text-[#263788] hover:bg-[#ffe804] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#ffe804]">                      
+                    <a href="https://wa.me/6282297002056" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-xl border border-[#263788]/20 px-4 py-3 text-xs font-bold text-[#003A70] hover:[#263788] bg-[#f7f9ff] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#ffe804]">                      
                       WhatsApp Helpdesk
                     </a>
                   </div>

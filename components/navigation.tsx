@@ -35,15 +35,15 @@ export function Navigation() {
     >
       <div className="max-w-7xl mx-auto px-5 md:px-6 h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 shrink-0" aria-label="Info Layanan KPP">
-          <div className="relative h-18 w-28 sm:h-18 sm:w-32">
-          <Image
-            src="/images/logoweb.png"
-            alt="Direktorat Jenderal Pajak"
-            width={400}
-            height={240}
-            className="h-16 w-auto object-contain sm:h-[72px]"
-          />
-        </div>
+          <div className="relative h-16 w-28 sm:h-18 sm:w-32">
+            <Image
+              src="/images/logoweb.png"
+              alt="Direktorat Jenderal Pajak"
+              width={400}
+              height={240}
+              className="h-16 w-auto object-contain sm:h-[72px]"
+            />
+          </div>
           <span className="hidden sm:block h-7 w-px bg-[#dce3f3]" />
           <span className="hidden sm:block text-[#212c5f] font-semibold text-sm leading-tight">
             Info Layanan

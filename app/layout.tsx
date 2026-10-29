@@ -3,6 +3,7 @@ import type { Metadata, Viewport } from "next"
 import { Inter, JetBrains_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { LenisProvider } from "@/components/lenis-provider"
+import { AudioJingle } from "@/components/audio-jingle"
 import ClickSpark from "@/components/click-spark"
 import "./globals.css"
 
@@ -52,6 +53,7 @@ export default function RootLayout({
   return (
     <html lang="id">
       <body className={`${_inter.variable} font-sans antialiased`}>
+        <AudioJingle />
         <ClickSpark
           sparkColor="#FFE804"
           sparkSize={12}

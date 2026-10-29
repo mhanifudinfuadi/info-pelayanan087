@@ -69,18 +69,18 @@ export function FlavorCarousel() {
   }
 
   return (
-    <section id="layanan" className="relative py-20 md:py-28 bg-[#f7f9ff] overflow-hidden">
+    <section id="layanan" className="relative py-16 sm:py-20 md:py-28 bg-[#f7f9ff] overflow-hidden">
       <div className="max-w-7xl mx-auto px-5 md:px-6">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-5 mb-10">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 md:gap-5 mb-8 md:mb-10">
           <div>
-            <span className="font-mono text-[#263788] text-xs tracking-[.25em]">LAYANAN YANG SERING DICARI</span>
-            <h2 className="text-4xl md:text-6xl font-black tracking-tight text-[#070f32] mt-2">Mau ngurus apa?</h2>
+            <span className="font-mono text-[#263788] text-[10px] sm:text-xs tracking-[.2em] sm:tracking-[.25em]">LAYANAN YANG SERING DICARI</span>
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-black tracking-tight text-[#070f32] mt-2">Mau ngurus apa?</h2>
           </div>
-          <p className="max-w-md text-[#53607f]">Pilih kebutuhanmu. Kita mulai dari yang paling simpel.</p>
+          <p className="max-w-md text-sm sm:text-base text-[#53607f]">Pilih kebutuhanmu. Kita mulai dari yang paling simpel.</p>
         </div>
 
         <div
-          className="relative min-h-[470px] md:min-h-[430px] rounded-[2rem] overflow-hidden border border-[#dce3f3] bg-white"
+          className="relative min-h-[520px] sm:min-h-[500px] md:min-h-[430px] rounded-[1.5rem] md:rounded-[2rem] overflow-hidden border border-[#dce3f3] bg-white"
           onMouseMove={(e) => {
             const r = e.currentTarget.getBoundingClientRect()
             rotateY.set(((e.clientX-r.left)/r.width-.5)*5)
@@ -100,16 +100,16 @@ export function FlavorCarousel() {
               animate="center"
               exit="exit"
               style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
-              className="relative z-10 min-h-[470px] md:min-h-[430px] grid md:grid-cols-[1fr_.8fr] items-center gap-8 p-8 md:p-14"
+              className="relative z-10 min-h-[520px] sm:min-h-[500px] md:min-h-[430px] grid md:grid-cols-[1fr_.8fr] items-center gap-8 p-6 sm:p-8 md:p-14 pb-20 md:pb-14"
             >
               <div>
-                <div className="w-16 h-16 rounded-2xl flex items-center justify-center mb-7" style={{ backgroundColor: `${current.accent}12`, color: current.accent }}>
-                  <current.icon className="w-8 h-8" />
+                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl flex items-center justify-center mb-5 sm:mb-7" style={{ backgroundColor: `${current.accent}12`, color: current.accent }}>
+                  <current.icon className="w-7 h-7 sm:w-8 sm:h-8" />
                 </div>
-                <span className="font-mono text-xs tracking-[.25em]" style={{ color: current.accent }}>{current.tagline}</span>
-                <h3 className="text-5xl md:text-7xl font-black tracking-[-.05em] text-[#070f32] mt-2">{current.name}</h3>
-                <p className="mt-5 max-w-xl text-lg text-[#53607f] leading-relaxed">{current.description}</p>
-                <a href={current.href} target={current.external ? "_blank" : undefined} rel={current.external ? "noopener noreferrer" : undefined} className="inline-flex items-center gap-2 mt-7 font-bold text-[#263788]">
+                <span className="font-mono text-[10px] sm:text-xs tracking-[.2em] sm:tracking-[.25em]" style={{ color: current.accent }}>{current.tagline}</span>
+                <h3 className="text-[2.6rem] sm:text-5xl md:text-7xl font-black tracking-[-.04em] sm:tracking-[-.05em] text-[#070f32] mt-2 break-words">{current.name}</h3>
+                <p className="mt-4 sm:mt-5 max-w-xl text-base sm:text-lg text-[#53607f] leading-relaxed">{current.description}</p>
+                <a href={current.href} target={current.external ? "_blank" : undefined} rel={current.external ? "noopener noreferrer" : undefined} className="inline-flex items-center gap-2 mt-5 sm:mt-7 font-bold text-[#263788]">
                   Lihat alurnya <ArrowRight className="w-4 h-4" />
                 </a>
               </div>
@@ -122,7 +122,7 @@ export function FlavorCarousel() {
             </motion.div>
           </AnimatePresence>
 
-          <div className="absolute bottom-7 left-8 right-8 flex items-center justify-between z-20">
+          <div className="absolute bottom-5 sm:bottom-7 left-5 sm:left-8 right-5 sm:right-8 flex items-center justify-between z-20">
             <div className="flex gap-2">
               {services.map((s, i) => (
                 <button key={s.id} aria-label={`Layanan ${s.name}`} onClick={() => { setDirection(i > index ? 1 : -1); setIndex(i); setPage((p) => p+1) }} className={`h-2 rounded-full transition-all ${i === index ? "w-10 bg-[#263788]" : "w-2 bg-[#263788]/20"}`} />

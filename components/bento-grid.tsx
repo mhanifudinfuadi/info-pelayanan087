@@ -44,18 +44,18 @@ function FeatureCard({ feature, index }: { feature: (typeof features)[0]; index:
         href={feature.href}
         target={feature.external ? "_blank" : undefined}
         rel={feature.external ? "noopener noreferrer" : undefined}
-        className="relative block h-full rounded-3xl border border-[#dce3f3] bg-white p-7 overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-[#ffe804]"
+        className="relative block h-full rounded-3xl border border-[#dce3f3] bg-white p-6 sm:p-7 pb-14 overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-[#ffe804]"
         aria-label={`${feature.title} — buka layanan resmi`}
       >
         <motion.div animate={{ scale: hovered ? 1.08 : 1, rotate: hovered ? 4 : 0 }} className="w-14 h-14 rounded-2xl flex items-center justify-center" style={{ backgroundColor: `${feature.accent}12`, color: feature.accent }}>
           <feature.icon className="w-7 h-7" />
         </motion.div>
-        <div className="mt-14">
-          <div className="font-mono text-xs tracking-widest" style={{ color: feature.accent }}>{feature.subtitle}</div>
-          <h3 className="text-4xl font-black text-[#070f32] tracking-tight mt-1">{feature.title}</h3>
-          <p className="mt-3 text-[#53607f] leading-relaxed">{feature.description}</p>
+        <div className="mt-8 sm:mt-10 lg:mt-14">
+          <div className="font-mono text-[10px] sm:text-xs tracking-widest" style={{ color: feature.accent }}>{feature.subtitle}</div>
+          <h3 className="text-3xl sm:text-4xl font-black text-[#070f32] tracking-tight mt-1">{feature.title}</h3>
+          <p className="mt-2 sm:mt-3 text-sm sm:text-base text-[#53607f] leading-relaxed">{feature.description}</p>
         </div>
-        <div className="absolute right-5 bottom-5 flex items-center gap-2 font-mono text-xs text-[#263788]/40">0{index+1}<ExternalLink className="w-3.5 h-3.5" /></div>
+        <div className="absolute right-5 bottom-5 flex items-center gap-2 font-mono text-xs text-[#263788]/50">0{index+1}<ExternalLink className="w-3.5 h-3.5" /></div>
       </a>
     </motion.div>
   )
@@ -63,13 +63,13 @@ function FeatureCard({ feature, index }: { feature: (typeof features)[0]; index:
 
 export function BentoGrid() {
   return (
-    <section className="py-20 md:py-28 bg-white">
+    <section className="py-16 sm:py-20 md:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-5 md:px-6">
-        <div className="mb-10">
-          <span className="font-mono text-[#263788] text-xs tracking-[.25em]">PICK YOUR NEED</span>
-          <h2 className="text-4xl md:text-6xl font-black tracking-tight text-[#070f32] mt-2">Yang kamu cari, ada di sini.</h2>
+        <div className="mb-8 md:mb-10">
+          <span className="font-mono text-[#263788] text-[10px] sm:text-xs tracking-[.2em] sm:tracking-[.25em]">PICK YOUR NEED</span>
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-black tracking-tight text-[#070f32] mt-2">Yang kamu cari, ada di sini.</h2>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4" style={{ perspective: 1000 }}>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4" style={{ perspective: 1000 }}>
           {features.map((feature, index) => <FeatureCard key={feature.title} feature={feature} index={index} />)}
         </div>
       </div>

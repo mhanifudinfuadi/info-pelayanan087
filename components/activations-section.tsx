@@ -18,15 +18,15 @@ const onlineCards = [
 
 export function ActivationsSection() {
   return (
-    <section id="cara-mulai" className="relative py-20 md:py-28 bg-[#070f32] text-white overflow-hidden">
+    <section id="cara-mulai" className="relative py-16 sm:py-20 md:py-28 bg-[#070f32] text-white overflow-hidden scroll-mt-16 sm:scroll-mt-20">
       <div className="absolute -right-28 top-10 w-96 h-96 rounded-full bg-[#263788]/30 blur-3xl" />
       <div className="absolute -left-24 bottom-0 w-80 h-80 rounded-full bg-[#ffe804]/10 blur-3xl" />
       <div className="relative max-w-7xl mx-auto px-5 md:px-6">
-        <div className="grid lg:grid-cols-[.8fr_1.2fr] gap-12 items-start">
+        <div className="grid lg:grid-cols-[.8fr_1.2fr] gap-8 md:gap-12 items-start">
           <div>
-            <span className="font-mono text-[#ffe804] text-xs tracking-[.25em]">NGGAK TAHU MULAI DARI MANA?</span>
-            <h2 className="text-4xl md:text-6xl font-black tracking-tight leading-[.95] mt-4">Mulai dari<br /><span className="text-[#ffe804]">sini aja.</span></h2>
-            <p className="mt-6 text-white/65 max-w-md leading-relaxed">Nggak perlu langsung hafal istilah pajak. <br />Ikuti alurnya satu per satu.</p>
+            <span className="font-mono text-[#ffe804] text-[10px] sm:text-xs tracking-[.2em] sm:tracking-[.25em]">NGGAK TAHU MULAI DARI MANA?</span>
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-black tracking-tight leading-[.95] mt-3 md:mt-4">Mulai dari<br /><span className="text-[#ffe804]">sini aja.</span></h2>
+            <p className="mt-4 md:mt-6 text-sm sm:text-base text-white/65 max-w-md leading-relaxed">Nggak perlu langsung hafal istilah pajak. <br className="hidden sm:block" />Ikuti alurnya satu per satu.</p>
           </div>
 
           <div className="space-y-3">
@@ -41,20 +41,20 @@ export function ActivationsSection() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08 }}
                 whileHover={{ x: 6 }}
-                className="group rounded-2xl border border-white/10 bg-white/[.04] p-5 flex gap-5 items-start focus:outline-none focus-visible:ring-2 focus-visible:ring-[#ffe804]"
+                className="group rounded-2xl border border-white/10 bg-white/[.04] p-4 sm:p-5 flex gap-4 sm:gap-5 items-start focus:outline-none focus-visible:ring-2 focus-visible:ring-[#ffe804]"
               >
-                <span className="font-mono text-[#ffe804] text-xs pt-1">{step.n}</span>
-                <div className="flex-1">
-                  <h3 className="font-bold text-lg">{step.title}</h3>
+                <span className="font-mono text-[#ffe804] text-xs pt-1 shrink-0">{step.n}</span>
+                <div className="flex-1 min-w-0">
+                  <h3 className="font-bold text-base sm:text-lg">{step.title}</h3>
                   <p className="text-white/55 text-sm leading-relaxed mt-1">{step.text}</p>
                 </div>
-                <ArrowRight className="w-5 h-5 text-white/25 group-hover:text-[#ffe804] transition-colors mt-1" />
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 shrink-0 text-white/25 group-hover:text-[#ffe804] transition-colors mt-1" />
               </motion.a>
             ))}
           </div>
         </div>
 
-        <div id="online" className="mt-16 grid md:grid-cols-3 gap-4">
+        <div id="online" className="mt-12 md:mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 scroll-mt-16 sm:scroll-mt-20">
           {onlineCards.map((card, i) => {
             const Icon = card.icon
             return (
@@ -65,7 +65,7 @@ export function ActivationsSection() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08 }}
                 whileHover={{ y: -6 }}
-                className="group rounded-2xl bg-white p-6 text-[#070f32]"
+                className="group rounded-2xl bg-white p-5 sm:p-6 text-[#070f32]"
               >
                 <Icon className="w-6 h-6 text-[#263788]" />
                 <div className="font-mono text-[10px] tracking-widest text-[#53607f] mt-5">{card.eyebrow}</div>
@@ -75,13 +75,11 @@ export function ActivationsSection() {
                 </div>
                 <p className="text-sm text-[#53607f] mt-2 leading-relaxed">{card.text}</p>
                 {card.title === "Minta bantuan" ? (
-                  <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-2">
-                    <a href="https://wa.me/6282297002049" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-xl hover:bg-[#ffe804]
-                      bg-[#263788] px-4 py-3 text-xs font-bold text-white hover:opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#ffe804]">
+                  <div className="mt-5 grid grid-cols-1 xl:grid-cols-2 gap-2">
+                    <a href="https://wa.me/6282297002049" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center text-center rounded-xl bg-[#263788] px-4 py-3 text-xs font-bold text-white hover:bg-[#212c5f] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#ffe804] transition-colors">
                       WhatsApp Pelayanan
                     </a>
-                    <a href="https://wa.me/6282297002056" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-xl border border-[#263788]/20 
-                    px-4 py-3 text-xs text-white font-bold bg-[#ffe804] hover:bg-[#263788] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#ffe804]">                      
+                    <a href="https://wa.me/6282297002056" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center text-center rounded-xl bg-[#ffe804] px-4 py-3 text-xs font-bold text-[#070f32] hover:bg-[#ffc91b] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#ffe804] transition-colors">
                       WhatsApp Helpdesk
                     </a>
                   </div>

@@ -457,7 +457,9 @@ html {
   text-size-adjust: 100%;
 }
 
-/* Desktop-first base scaling: keep mobile readable without zoom */
+/* Mobile: keep the same visual language, just scaled down.
+   Spacing/typography per section is handled with Tailwind breakpoints
+   in the components, so no global overrides are forced here. */
 @media (max-width: 767px) {
   .djp-glass {
     backdrop-filter: blur(12px);
@@ -468,43 +470,24 @@ html {
     transform: none;
   }
 
-  /* Match desktop layout density on mobile */
-  [class*="max-w-7xl"] {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-  }
-
-  /* Keep hero text readable like desktop */
-  h1 {
-    font-size: clamp(2.25rem, 11vw, 3.6rem);
-    line-height: 0.92;
-  }
-
-  /* Maintain card proportions */
-  [class*="rounded-2rem"] {
-    border-radius: 1.5rem;
-  }
-
   /* Prevent horizontal scroll on grid items */
   [class*="grid"] {
     width: 100%;
   }
 }
 
-/* Tablet */
-@media (min-width: 768px) and (max-width: 1023px) {
-  [class*="max-w-7xl"] {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+@media (max-width: 1023px) {
+  /* Anchor offset for the fixed header */
+  section[id],
+  div[id] {
+    scroll-margin-top: 4.5rem;
   }
 }
 
 /* Large desktop */
 @media (min-width: 1280px) {
-  [class*="max-w-7xl"] {
-    max-width: 1280px;
-    margin-left: auto;
-    margin-right: auto;
+  html {
+    scroll-padding-top: 5rem;
   }
 }
 

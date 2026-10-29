@@ -24,6 +24,23 @@ export function Navigation() {
     return () => window.removeEventListener("scroll", onScroll)
   }, [])
 
+  useEffect(() => {
+    if (!isOpen) return
+
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setIsOpen(false)
+    const onResize = () => window.innerWidth >= 1024 && setIsOpen(false)
+
+    document.body.style.overflow = "hidden"
+    window.addEventListener("keydown", onKey)
+    window.addEventListener("resize", onResize)
+
+    return () => {
+      document.body.style.overflow = ""
+      window.removeEventListener("keydown", onKey)
+      window.removeEventListener("resize", onResize)
+    }
+  }, [isOpen])
+
   return (
     <motion.header
       initial={{ y: -80, opacity: 0 }}
@@ -33,21 +50,22 @@ export function Navigation() {
         scrolled ? "bg-white/95 backdrop-blur-xl shadow-sm" : "bg-white/80 backdrop-blur-md"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-5 md:px-6 h-20 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 shrink-0" aria-label="Info Layanan KPP">
-          <div className="relative h-16 w-28 sm:h-18 sm:w-32">
+      <div className="max-w-7xl mx-auto px-4 sm:px-5 md:px-6 h-16 sm:h-20 flex items-center justify-between">
+        <Link href="/" className="flex items-center gap-2 min-w-0 shrink" aria-label="Info Layanan KPP">
+          <div className="relative flex items-center justify-center shrink-0 rounded-xl bg-white ring-1 ring-[#dce3f3] px-1.5 py-1 sm:ring-0 sm:px-0 sm:py-0 sm:bg-transparent">
             <Image
               src="/images/logoweb.png"
               alt="Direktorat Jenderal Pajak"
               width={400}
               height={240}
-              className="h-16 w-auto object-contain sm:h-[72px]"
+              priority
+              className="h-9 w-auto object-contain sm:h-16 md:h-[72px]"
             />
           </div>
           <span className="hidden sm:block h-7 w-px bg-[#dce3f3]" />
-          <span className="hidden sm:block text-[#212c5f] font-semibold text-sm leading-tight">
+          <span className="text-[#212c5f] font-semibold text-[13px] sm:text-sm leading-tight truncate">
             Info Layanan
-            <span className="block text-[#53607f] font-normal">KPP Madya Dua Jakarta Barat</span>
+            <span className="block text-[#53607f] font-normal text-[11px] sm:text-sm truncate">KPP Madya Dua Jakbar</span>
           </span>
         </Link>
 
@@ -76,7 +94,7 @@ export function Navigation() {
           aria-label={isOpen ? "Tutup menu" : "Buka menu"}
           aria-expanded={isOpen}
           onClick={() => setIsOpen((v) => !v)}
-          className="lg:hidden w-11 h-11 rounded-full border border-[#dce3f3] text-[#212c5f] flex items-center justify-center"
+          className="lg:hidden shrink-0 w-11 h-11 rounded-full border border-[#dce3f3] text-[#212c5f] flex items-center justify-center active:bg-[#eaf0ff]"
         >
           {isOpen ? <X size={20} /> : <Menu size={20} />}
         </button>
@@ -84,13 +102,24 @@ export function Navigation() {
 
       <AnimatePresence>
         {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden border-t border-[#dce3f3] bg-white overflow-hidden"
-          >
-            <nav className="px-5 py-5 space-y-2">
+          <>
+            <motion.button
+              type="button"
+              aria-label="Tutup menu"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsOpen(false)}
+              className="lg:hidden fixed inset-0 top-16 sm:top-20 z-40 bg-[#070f32]/30 backdrop-blur-sm cursor-default"
+            />
+            <motion.div
+              initial={{ opacity: 0, y: -8 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -8 }}
+              transition={{ duration: 0.2 }}
+              className="lg:hidden relative z-50 border-t border-[#dce3f3] bg-white shadow-lg overflow-hidden"
+            >
+              <nav className="px-4 sm:px-5 py-3 space-y-1 max-h-[calc(100dvh-10rem)] overflow-y-auto">
               {navItems.map((item, i) => (
                 <motion.a
                   key={item.label}
@@ -99,7 +128,7 @@ export function Navigation() {
                   initial={{ opacity: 0, x: -12 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.05 }}
-                  className="flex items-center justify-between px-4 py-3 rounded-xl hover:bg-[#eaf0ff] text-[#212c5f] font-semibold"
+                  className="flex items-center justify-between px-4 py-3.5 rounded-xl hover:bg-[#eaf0ff] text-[#212c5f] font-semibold"
                 >
                   {item.label}
                   <ChevronDown className="-rotate-90 w-4 h-4" />
@@ -108,12 +137,13 @@ export function Navigation() {
               <a
                 href="#layanan"
                 onClick={() => setIsOpen(false)}
-                className="mt-2 block text-center bg-[#ffe804] text-[#070f32] px-5 py-3 rounded-xl font-bold"
+                className="mt-2 block text-center bg-[#263788] text-white px-5 py-3.5 rounded-xl font-bold"
               >
                 Mulai di sini →
               </a>
             </nav>
           </motion.div>
+          </>
         )}
       </AnimatePresence>
     </motion.header>

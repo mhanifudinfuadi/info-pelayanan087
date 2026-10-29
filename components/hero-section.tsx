@@ -43,7 +43,7 @@ export function HeroSection() {
     <section
       ref={ref}
       id="hero"
-      className="relative min-h-[92vh] flex items-center overflow-hidden bg-white noise-overlay"
+      className="relative min-h-[92vh] lg:min-h-[92vh] flex items-center overflow-hidden bg-white noise-overlay"
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_25%,rgba(255,232,4,.15),transparent_28%),radial-gradient(circle_at_85%_70%,rgba(38,55,136,.12),transparent_32%)]" />
 
@@ -57,7 +57,7 @@ export function HeroSection() {
         className="absolute -left-20 bottom-10 w-80 h-80 rounded-full bg-[#263788]/10 blur-3xl"
       />
 
-      <div className="relative z-10 max-w-7xl mx-auto w-full px-5 md:px-6 pt-28 pb-14">
+      <div className="relative z-10 max-w-7xl mx-auto w-full px-5 md:px-6 pt-24 sm:pt-28 pb-14">
         <motion.div style={{ scale, opacity }} className="max-w-5xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -73,7 +73,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 45 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.12 }}
-            className="mt-7 text-[clamp(3.4rem,10vw,8rem)] font-black tracking-[-.065em] leading-[.84] text-[#070f32]"
+            className="mt-6 sm:mt-7 text-[clamp(3rem,13vw,8rem)] font-black tracking-[-.055em] sm:tracking-[-.065em] leading-[.9] sm:leading-[.84] text-[#070f32]"
           >
             Pajak?
             <span className="block text-[#263788]">Santai.</span>
@@ -83,7 +83,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.28 }}
-            className="mt-7 max-w-2xl text-lg md:text-2xl text-[#53607f] leading-relaxed"
+            className="mt-5 sm:mt-7 max-w-2xl text-base sm:text-lg md:text-2xl text-[#53607f] leading-relaxed"
           >
          {"Info layanan KPP yang kamu butuhin, mulai dari "}
           <strong className="text-[#212c5f]">
@@ -96,7 +96,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4 }}
-            className="mt-9 flex flex-col sm:flex-row gap-3"
+            className="mt-8 sm:mt-9 flex flex-col sm:flex-row gap-2.5 sm:gap-3"
           >
             <a
               href="#layanan"
@@ -122,14 +122,14 @@ export function HeroSection() {
           initial={{ opacity: 0, x: 40, y: 20 }}
           animate={{ opacity: 1, x: 0, y: 0 }}
           transition={{ delay: 0.45, duration: 0.8 }}
-          className="hidden lg:block absolute right-6 top-[22%] w-[min(38vw,460px)]"
+          className="mx-auto mt-10 mb-4 w-full max-w-[460px] px-3 sm:px-0 lg:absolute lg:right-6 lg:top-[22%] lg:mt-0 lg:mb-0 lg:mx-0 lg:max-w-none lg:w-[min(38vw,460px)]"
         >
           <a
             href="https://www.pajak.go.id/id/daftar-unit-kerja?title=dua+jakarta+barat"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Cari KPP Madya Dua Jakarta Barat"
-            className="group relative block overflow-hidden rounded-[2rem] border border-[#dce3f3] bg-white shadow-2xl shadow-[#070f32]/10 rotate-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#ffe804]"
+            className="group relative block overflow-hidden rounded-3xl lg:rounded-[2rem] border border-[#dce3f3] bg-white shadow-2xl shadow-[#070f32]/10 rotate-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#ffe804]"
           >
             <div className="relative aspect-[745/435]">
               <Image
@@ -137,18 +137,18 @@ export function HeroSection() {
                 alt="Ilustrasi layanan KPP dan DJP"
                 fill
                 priority
-                sizes="(max-width: 1280px) 38vw, 460px"
+                sizes="(max-width: 1024px) 90vw, (max-width: 1280px) 38vw, 460px"
                 className="object-cover"
               />
 
               <div className="absolute inset-0 bg-gradient-to-t from-[#070f32]/75 via-transparent to-transparent" />
 
-              <div className="absolute inset-x-0 bottom-0 p-6 text-white">
+              <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6 text-white">
                 <div className="font-mono text-[10px] tracking-[.25em] text-[#ffe804]">
                   KPP MADYA DUA JAKARTA BARAT
                 </div>
 
-                <div className="mt-2 text-2xl font-black">
+                <div className="mt-1.5 sm:mt-2 text-xl sm:text-2xl font-black">
                   Info layanan, satu pintu.
                 </div>
               </div>
@@ -161,13 +161,13 @@ export function HeroSection() {
 
           <a
             href="tel:1500200"
-            className="absolute -left-7 -bottom-6 rounded-2xl bg-[#ffe804] px-5 py-4 shadow-xl -rotate-3 hover:scale-[1.02] transition-transform"
+            className="absolute -left-2 sm:-left-7 -bottom-5 sm:-bottom-6 rounded-2xl bg-[#ffe804] px-4 py-3 sm:px-5 sm:py-4 shadow-xl -rotate-3 hover:scale-[1.02] transition-transform"
           >
             <div className="font-mono text-[10px] tracking-widest text-[#070f32]/60">
               BUTUH BANTUAN?
             </div>
 
-            <div className="mt-1 font-black text-[#070f32]">
+            <div className="mt-1 font-black text-sm sm:text-base text-[#070f32]">
               Kring Pajak 1500 200
             </div>
           </a>
@@ -191,7 +191,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 35 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.55, duration: 0.7 }}
-          className="mt-14 grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-3xl"
+          className="mt-12 sm:mt-14 grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-3 max-w-3xl"
         >
           {[
             ["01", "Cari layanan", Search, "#layanan"],
